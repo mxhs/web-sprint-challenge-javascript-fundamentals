@@ -26,7 +26,7 @@ zooAnimals.forEach(item => {
   return displayNames.push(`Name: ${item.animal_name}, Scientfic: ${item.scientific_name}.`)
 })
 
-console.log(displayNames);
+console.log("Request 1 ->", displayNames);
 
 /* Request 2: .map()
 
@@ -38,7 +38,7 @@ const lowCaseAnimalNames = zooAnimals.map(item => {
   return item.animal_name.toLowerCase()
 })
 
-console.log(lowCaseAnimalNames);
+console.log("Request 2 ->", lowCaseAnimalNames);
 
 /* Request 3: .filter() 
 
@@ -48,7 +48,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 const lowPopulationAnimals = zooAnimals.filter(item =>{
   return item.population < 5
 })
-console.log(lowPopulationAnimals);
+console.log("Request 3 ->", lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
@@ -58,7 +58,7 @@ The zoos need to know their total animal population across the United States. Fi
 let populationTotal = zooAnimals.reduce((acc, item) => {
   return acc + item.population
 }, 0);
-console.log(populationTotal);
+console.log("Request 4 Zoo Animal Population Total ->", populationTotal);
 
 
 // ==== Callbacks ====  
@@ -95,6 +95,7 @@ const greeting = function(a, b){
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
+console.log("CALLBACKS STEP 3 BELOW")
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
 console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
